@@ -1,6 +1,8 @@
 {
-  "ownerNumber": ["6285878313791@s.whatsapp.net"],
+  "ownerNumber": ["6285878313791"],
   "botName": "ItsukiBot - MD",
   "sessionName": "kizakixd",
+  "Mode": "Public"
+  "modelMenu": "LocButton"
   "pathImg": "./media/menu.jpg"
 }
