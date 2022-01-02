@@ -1,0 +1,258 @@
+exports.wait = () => {
+    return `Loading...`
+}
+
+exports.ok = () => {
+    return `Done.`
+}
+
+exports.err = () => {
+    return `Fitur Sedang Tahap Perbaikan
+
+Sedang Lapor Bug Ke Owner`
+}
+
+exports.emptyMess = () => {
+    return `Masukkan Pesan.️`
+}
+
+exports.ownerOnly = () => {
+    return `Owner Only.`
+}
+
+exports.doneOwner = () => {
+    return `Done Bos.`
+}
+
+exports.groupOnly = () => {
+    return `Command ini hanya bisa digunakan di dalam grup!`
+}
+
+exports.adminOnly = () => {
+    return `Command ini hanya bisa digunakan oleh admin grup!`
+}
+
+exports.nhFalse = () => {
+    return `Kode tidak valid!`
+}
+
+exports.listBlock = (blockNumber) => {
+    return `*── 「 HALL OF SHAME 」 ──*
+    
+Total diblokir: *${blockNumber.length}* user\n`
+}
+
+exports.notAdmin = () => {
+    return `User Bukan Seorang Admin!`
+}
+
+exports.adminAlready = () => {
+    return ` Tidak  Dapat Mem-promote User Yang Merupakan Admin!️`
+}
+
+exports.botNotAdmin = () => {
+    return `Jadikan Bot Sebagai Admin`
+}
+
+exports.received = (pushname) => {
+    return `
+Halo ${pushname}!
+Terima Kasih Telah Melapor, Laporanmu Akan Kami Segera Terima.`
+}
+
+exports.videoLimit = () => {
+    return `Ukuran File Terlalu Besar!`
+}
+
+exports.notNum = (q) => {
+    return `"${q}", Bukan Angka!`
+}
+
+exports.listMenu = (time, salam, pushname, prefix) => {
+    return `
+*┌────[ D A S H - M D ]────*
+*┃│*
+*┃│ ⫹⫺ Library : Baileys-Md*
+*┃│ ⫹⫺ Version : 1.0.1*
+*┃│ ⫹⫺ Language : Javascript*
+*┃│ ⫹⫺ Author : KiZakiXD*
+*┃│ ⫹⫺ Your Name : ${pushname}*
+*┃│ ⫹⫺ Time : ${time}*
+*┃│ ⫹⫺ Ucapan : Selamat ${salam}*
+*┃│*
+*┃├───[   MAIN   ]────*
+*┃│*
+*┃│ ❑   .menu / help*
+*┃│ ❑   .runtime*
+*┃│ ❑   .speed*
+*┃│*
+*┃├───[   INFO   ]────*
+*┃│*
+*┃│ ❑   .owner*
+*┃│ ❑   .rules*
+*┃│ ❑   .donate*
+*┃│*
+*┃├───[   DATABASE   ]────*
+*┃│*
+*┃│ ❑*
+*┃│*
+*┃├───[   OWNER   ]────*
+*┃│*
+*┃│ ❑   > evaluate*
+*┃│ ❑   $ exec*
+*┃│ ❑   .join [Link]*
+*┃│ ❑   .setppbot (tag/send image)*
+*┃│ ❑   .mode*
+*┃│ ❑   .restart*
+*┃│ ❑   .self*
+*┃│ ❑   .public*
+*┃│ ❑   .setmenu img/gif/loc*
+*┃│*
+*┃├───[   GROUP   ]────*
+*┃│*
+*┃│ ❑   .revoke*
+*┃│ ❑   .leave*
+*┃│ ❑   .group (open/close)*
+*┃│ ❑   .tagall (info)*
+*┃│ ❑   .hidetag (text)*
+*┃│*
+*┃├───[   WEEBS   ]────*
+*┃│*
+*┃│ ❑   .anime (query)*
+*┃│ ❑   .manga (query)*
+*┃│ ❑   .character (query)*
+*┃│*
+*┃├───[   MISC    ]────*
+*┃│*
+*┃│ ❑   .film (query)*
+*┃│ ❑   .wattpad (query)*
+*┃│ ❑   .webtoons (query)*
+*┃│ ❑   .drakor (query)*
+*┃│ ❑   .pinterest (query)*
+*┃│*
+*┃├───[   TOOLS   ]────*
+*┃│*
+*┃│ ❑*
+*┃│*
+*┃├───[   SEARCH   ]────*
+*┃│*
+*┃│ ❑*
+*┃│*
+*┃├───[   18+   ]────*
+*┃│*
+*┃│ ❑*
+*┃│*
+*┃├───[   DOWNLOADER   ]────*
+*┃│*
+*┃│ ❑   .tiktok [Link]*
+*┃│ ❑   .ytmp3 [Link]*
+*┃│ ❑   .ytmp4 [Link]*
+*┃│ ❑   .facebook [Link]*
+*┃│ ❑   .twitter [Link]*
+*┃│ ❑   .instagram [Link]*
+*┃│*
+*┃╰────[ D A S H - M D ]────*
+*┗━━━━━━━━━━━━━━━━━━━*
+
+    
+    
+*Selamat ${salam} ${pushname} 😖*
+*⌚Time Server : ${time}*
+*📚 List-Menu Chika Beta :*
+
+🤖 *INFO*
+├ ${prefix}owner
+├ ${prefix}rules
+├ ${prefix}donate
+└──────
+
+🧑 *OWNER*
+├ > evaluate
+├ $ exec
+├ ${prefix}join link
+├ ${prefix}setppbot (tag/send image)
+└──────
+
+⚙️ *GROUP*
+├ ${prefix}revoke
+├ ${prefix}leave
+├ ${prefix}group open/close
+├ ${prefix}tagall text
+├ ${prefix}hidetag text
+└──────
+
+😷 *WEEBS*
+├ ${prefix}anime query
+├ ${prefix}manga query
+├ ${prefix}character query
+└──────
+
+🔍 *MISC*
+├ ${prefix}film query
+├ ${prefix}wattpad query
+├ ${prefix}webtoons query
+├ ${prefix}drakor query
+├ ${prefix}pinterest query
+└──────
+
+🎞 *MEDIA*
+├ ${prefix}toimg (tag sticker)
+└──────
+
+⬇️ *DOWNLOADER* 
+├ ${prefix}tiktok link
+├ ${prefix}ytdl link
+├ ${prefix}ytmp3 link
+├ ${prefix}ytmp4 link
+├ ${prefix}ytdl link
+├ ${prefix}facebook link
+├ ${prefix}twitter link
+├ ${prefix}instagram link
+└──────
+
+🙏 *THANKS*
+├ Xfarr api
+├ Baileys#multi-device
+├ and all support
+└──────
+
+    `
+}
+
+exports.rules = (prefix) => {
+    return `
+*── 「 RULES AND FAQ 」 ──*
+
+1. Jangan spam bot. 
+Sanksi: *WARN/SOFT BLOCK*
+
+2. Jangan telepon bot.
+Sanksi: SOFT BLOCK*
+
+3. Bot di kick dari group.
+Sanksi: *Tidak Bisa Masuk Lagi*
+
+4. Gabisa makek? Gausah Salahin Bot
+Sanksi: *Tolol*
+
+
+    `
+}
+
+exports.tos = (ownerNumber, prefix) => {
+    return `
+*── 「 DONATE 」 ──*
+
+_Kalian Bisa Dukung Bot Lewat Donate Ke :_
+
+ _》Dana : 085878313791_
+ _》Gopay : 085878313791_
+ _》Pulsa : 085878313791 ( Indosat )_
+
+_Donate Kalian Sangat Berarti._
+
+_Contact person Owner:_
+_wa.me/6285878313791_
+
+    `
+}
