@@ -4,7 +4,7 @@ const figlet = require("figlet");
 const fs = require("fs");
 const P = require('pino')
 const ind = require('./help/zak')
-const { color, ChikaLog } = require("./lib/color");
+const { color, ZakiLog } = require("./lib/color");
 let setting = JSON.parse(fs.readFileSync('./config.json'));
 let sesion = `./${setting.sessionName}.json`
 const { state, saveState } = useSingleFileAuthState(sesion)
@@ -19,30 +19,30 @@ const start = async () => {
 	}), 'cyan'))
 	console.log(color('[ Created KiZaKiXD ]'))
     // set level pino ke fatal kalo ga mau nampilin log eror
-    const chika = makeWASocket({ printQRInTerminal: true, logger: P({ level: 'debug' }), auth: state }) 
-    chika.multi = true
-    chika.nopref = true
-    chika.prefa = 'anjing'
+    const zaki = makeWASocket({ printQRInTerminal: true, logger: P({ level: 'debug' }), auth: state }) 
+    zaki.multi = true
+    zaki.nopref = true
+    zaki.prefa = 'anjing'
     console.log(color('Connected....'))
-    chika.ev.on('messages.upsert', async m => {
+    zaki.ev.on('messages.upsert', async m => {
     	if (!m.messages) return
         const msg = m.messages[0]
-        require('./message/chika')(chika, msg, m, ind, setting)
+        require('./message/zaki')(zaki, msg, m, ind, setting)
     })
 
-    chika.ev.on('connection.update', (update) => {
+    zaki.ev.on('connection.update', (update) => {
         const { connection, lastDisconnect } = update
         if (connection === 'close') {
-            console.log(ChikaLog('connection closed, try to restart'))
+            console.log(ZakiLog('connection closed, try to restart'))
             lastDisconnect.error?.output?.statusCode !== DisconnectReason.loggedOut 
             ? start()
-            : console.log(ChikaLog('Wa web terlogout.'))
+            : console.log(ZakiLog('Wa web terlogout.'))
         }
     })
 
-    chika.ev.on('creds.update', () => saveState)
+    zaki.ev.on('creds.update', () => saveState)
 
-    return chika
+    return zaki
 }
 
 start()
