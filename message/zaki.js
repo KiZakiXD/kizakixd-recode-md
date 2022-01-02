@@ -255,7 +255,7 @@ await sendButton5(from, menunya, fake, await zaki.createMessage(from, {image: {u
 } else if (zaki.modelmenu ==  "loc") {
 await zaki.sendMessage(from, {
 location: { degreesLatotitude:0, degreesLongitude: 0, jpegThumbnail: fs.readFileSync("./media/menu.jpg") }})
-
+}
                 break
           /*  case prefix+'allmenu': {
                 try {
