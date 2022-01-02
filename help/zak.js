@@ -70,8 +70,8 @@ exports.notNum = (q) => {
 
 exports.listMenu = (time, salam, pushname, prefix) => {
     return `
-*┌────[ D A S H - M D ]────*
-*┃│*
+────[ D A S H - M D ]────*
+
 *┃│ ⫹⫺ Library : Baileys-Md*
 *┃│ ⫹⫺ Version : 1.0.1*
 *┃│ ⫹⫺ Language : Javascript*
@@ -122,7 +122,7 @@ exports.listMenu = (time, salam, pushname, prefix) => {
 *┃│ ❑   .manga (query)*
 *┃│ ❑   .character (query)*
 *┃│*
-*┃├───[   MISC    ]────*
+*┃├───[    MISC    ]────*
 *┃│*
 *┃│ ❑   .film (query)*
 *┃│ ❑   .wattpad (query)*
@@ -154,67 +154,9 @@ exports.listMenu = (time, salam, pushname, prefix) => {
 *┃╰────[ D A S H - M D ]────*
 *┗━━━━━━━━━━━━━━━━━━━*
 
+
     
-    
-*Selamat ${salam} ${pushname} 😖*
-*⌚Time Server : ${time}*
-*📚 List-Menu Chika Beta :*
 
-🤖 *INFO*
-├ ${prefix}owner
-├ ${prefix}rules
-├ ${prefix}donate
-└──────
-
-🧑 *OWNER*
-├ > evaluate
-├ $ exec
-├ ${prefix}join link
-├ ${prefix}setppbot (tag/send image)
-└──────
-
-⚙️ *GROUP*
-├ ${prefix}revoke
-├ ${prefix}leave
-├ ${prefix}group open/close
-├ ${prefix}tagall text
-├ ${prefix}hidetag text
-└──────
-
-😷 *WEEBS*
-├ ${prefix}anime query
-├ ${prefix}manga query
-├ ${prefix}character query
-└──────
-
-🔍 *MISC*
-├ ${prefix}film query
-├ ${prefix}wattpad query
-├ ${prefix}webtoons query
-├ ${prefix}drakor query
-├ ${prefix}pinterest query
-└──────
-
-🎞 *MEDIA*
-├ ${prefix}toimg (tag sticker)
-└──────
-
-⬇️ *DOWNLOADER* 
-├ ${prefix}tiktok link
-├ ${prefix}ytdl link
-├ ${prefix}ytmp3 link
-├ ${prefix}ytmp4 link
-├ ${prefix}ytdl link
-├ ${prefix}facebook link
-├ ${prefix}twitter link
-├ ${prefix}instagram link
-└──────
-
-🙏 *THANKS*
-├ Xfarr api
-├ Baileys#multi-device
-├ and all support
-└──────
 
     `
 }
