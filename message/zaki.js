@@ -248,14 +248,15 @@ zaki.relayMessage(id, buatpesan.message, { messageId: buatpesan.key.id })
                 }
             break
             case prefix+'menu': case prefix+'help':{
-if (zaki.modelmenu == "gif") {
-await sendButton5(from, menunya, fake, await zaki.createMessage(from, {video: {url: "./media/zaki.mp4", caption: menunya}, gifPlayback: true}))
-} else if (zaki.modelmenu == "image") {
-await sendButton5(from, menunya, fake, await zaki.createMessage(from, {image: {url: setting.imgPath, caption: menunya}}))
-} else if (zaki.modelmenu ==  "loc") {
-await zaki.sendMessage(from, {
-location: { degreesLatotitude:0, degreesLongitude: 0, jpegThumbnail: fs.readFileSync("./media/menu.jpg") }})
-}
+            if (zaki.modelmenu == "gif") {
+            await sendButton5(from, menunya, fake, await zaki.createMessage(from, {video: {url: "./media/zaki.mp4", caption: menunya}, gifPlayback: true}))
+            } else if (zaki.modelmenu == "image") {
+            await sendButton5(from, menunya, fake, await zaki.createMessage(from, {image: {url: setting.imgPath, caption: menunya}}))
+            } else if (zaki.modelmenu ==  "loc") {
+            await zaki.sendMessage(from, {
+            location: { degreesLatotitude:0, degreesLongitude: 0, jpegThumbnail: fs.readFileSync("./media/menu.jpg") }})
+            }
+            }
                 break
           /*  case prefix+'allmenu': {
                 try {
