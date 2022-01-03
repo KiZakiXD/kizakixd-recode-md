@@ -194,12 +194,37 @@ zaki.relayMessage(id, buatpesan.message, { messageId: buatpesan.key.id })
 }
         
         //Please dont edit for urlbutton 
-/*        const buttonsDefault = [
-            { callButton: {displayText: `️Call Owner`, phoneNumber: `+628127668234`} },
-            { urlButton: { displayText: `Script Bot`, url : `https://github.com/rashidsiregar28/chikabot`} },
-            { quickReplyButton: { displayText: `🧑 Owner`, id: `${prefix}owner` } },
-            { quickReplyButton: { displayText: `🎛️ Rules`, id: `${prefix}rules` } }
-        ]*/
+           const buttonsDefault = [      
+{
+            "urlButton": {
+              "displayText": "Github Owner",
+              "url": "https://github.com/kizakixd/"
+            }
+          },
+          {
+            "callButton": {
+              "displayText": "Call Owner",
+              "phoneNumber": "+6285878313791"
+            }
+          },
+          {
+            "quickReplyButton": {
+              "displayText": "Donate",
+              "id": `${prefix}Owner`
+            }
+          },
+          {
+            "quickReplyButton": {
+              "displayText": "Script",
+              "id": `${prefix}sc`,
+            }
+          },
+          {
+            "quickReplyButton": {
+              "displayText": "Donate",
+              "id": `${prefix}donate`
+            }
+         } ]
 
         const textTemplateButtons = (from, text, footer, buttons) => {
             return zaki.sendMessage(from, { text: text, footer: footer, templateButtons: buttons })
