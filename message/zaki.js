@@ -276,7 +276,7 @@ zaki.relayMessage(id, buatpesan.message, { messageId: buatpesan.key.id })
             if (zaki.modelmenu == "gif") {
             await buttonsDefault(from, zak.listMenu, await zaki.createMessage(from, {video: {url: "./media/zaki.mp4", caption: menunya}, gifPlayback: true}))
             } else if (zaki.modelmenu == "image") {
-            await buttonsDefault(from, zak.listMenu, await zaki.createMessage(from, {image: {url: setting.imgPath, caption: zaki.listMenu}}))
+            await buttonsDefault(from, zak.listMenu, await zaki.createMessage(from, {image: {url: setting.pathImg, caption: zaki.listMenu}}))
             } else if (zaki.modelmenu ==  "loc") {
             await zaki.sendMessage(from, {
             location: { degreesLatotitude:0, degreesLongitude: 0, jpegThumbnail: fs.readFileSync("./media/menu.jpg") }})
