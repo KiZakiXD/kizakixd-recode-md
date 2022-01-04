@@ -76,7 +76,7 @@ module.exports = async(zaki, msg, m, zak, setting) => {
         const reply = (teks, men) => {
              return zaki.sendMessage(from, { text: teks, mentions: men ? men : [] }, { quoted: msg })
         }
-        const textImg = (teks, buffer = fs.readFileSync(setting.pathImg), mess, men) => {
+        const textImg = (teks, buffer = fs.readFileSync(./media/menu.jpg), mess, men) => {
              return zaki.sendMessage(from, { text: teks, jpegThumbnail: buffer, mention: men ? men : [] }, { quoted: mess ? mess : msg })
         }
         const sendMess = (from, teks) => {
@@ -272,7 +272,7 @@ zaki.relayMessage(id, buatpesan.message, { messageId: buatpesan.key.id })
                     sendContact(from, x.split('@s.whatsapp.net')[0], 'Owner of - ' + botNumber, msg)
                 }
             break
-            case prefix+'menu': case prefix+'help':{
+          /*  case prefix+'menu': case prefix+'help':{
             if (zaki.modelmenu == "gif") {
             await buttonsDefault(from, zak.listMenu, await zaki.createMessage(from, {video: {url: "./media/zaki.mp4", caption: menunya}, gifPlayback: true}))
             } else if (zaki.modelmenu == "image") {
@@ -282,8 +282,8 @@ zaki.relayMessage(id, buatpesan.message, { messageId: buatpesan.key.id })
             location: { degreesLatotitude:0, degreesLongitude: 0, jpegThumbnail: fs.readFileSync("./media/menu.jpg") }})
             }
             }
-                break
-          /*  case prefix+'allmenu': {
+                break*/
+            case prefix+'menu': {
                 try {
                     var prof = await zaki.profilePictureUrl(sender, 'image')
                 } catch {
@@ -291,7 +291,7 @@ zaki.relayMessage(id, buatpesan.message, { messageId: buatpesan.key.id })
                 }
                 sendFileFromUrl(from, prof, zak.listMenu(time, salam, pushname, prefix), msg)
             }
-            break*/
+            break
             // Owner
             case prefix+'join': case prefix+'joingc': {
                 if (!isOwner && !fromMe) return reply(zak.ownerOnly())
