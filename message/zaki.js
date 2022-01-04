@@ -246,15 +246,15 @@ zaki.relayMessage(id, buatpesan.message, { messageId: buatpesan.key.id })
                 try {
                     let evaled = await eval(chats.slice(2))
                     if (typeof evaled !== 'string') evaled = require('util').inspect(evaled)
-                    textImg(`${evaled}`)
+                    reply(`${evaled}`)
                 } catch (err) {
-                    textImg(`${err}`)
+                    reply(`${err}`)
                 }
             } else if (chats.startsWith("$ ")){
                 console.log(color('[EXEC]'), color(moment(msg.messageTimestamp * 1000).format('DD/MM/YY HH:mm:ss'), 'yellow'), color(`Dari Owner aowkoakwoak`))
                 exec(chats.slice(2), (err, stdout) => {
-					if (err) return textImg(`${err}`)
-					if (stdout) textImg(`${stdout}`)
+					if (err) return reply(`${err}`)
+					if (stdout) reply(`${stdout}`)
 				})
             }
         }
