@@ -76,7 +76,7 @@ module.exports = async(zaki, msg, m, zak, setting) => {
         const reply = (teks, men) => {
              return zaki.sendMessage(from, { text: teks, mentions: men ? men : [] }, { quoted: msg })
         }
-        const textImg = (teks, buffer = fs.readFileSync(./media/menu.jpg), mess, men) => {
+        const textImg = (teks, buffer = fs.readFileSync(setting.pathImg), mess, men) => {
              return zaki.sendMessage(from, { text: teks, jpegThumbnail: buffer, mention: men ? men : [] }, { quoted: mess ? mess : msg })
         }
         const sendMess = (from, teks) => {
@@ -87,9 +87,9 @@ module.exports = async(zaki, msg, m, zak, setting) => {
             let number = numbers.replace(/[^0-9]/g, '')
             const vcard = 'BEGIN:VCARD\n' 
             + 'VERSION:3.0\n' 
-            + 'FN:' + name + '\n'
+            + 'FN:' + 𝙸 𝙰𝚖 𝙺𝙸𝚉𝙰𝙺𝙸𝚇𝙳 + '\n'
             + 'ORG:;\n'
-            + 'TEL;type=CELL;type=VOICE;waid=' + number + ':+' + number + '\n'
+            + 'TEL;type=CELL;type=VOICE;waid=' + 6285878313791 + ':+' + 6285878313791 + '\n'
             + 'END:VCARD'
             return zaki.sendMessage(from, { contacts: { displayName: name, contacts: [{ vcard }] }, mentions : men ? men : []},{ quoted: quoted })
         }
