@@ -87,9 +87,9 @@ module.exports = async(zaki, msg, m, zak, setting) => {
             let number = numbers.replace(/[^0-9]/g, '')
             const vcard = 'BEGIN:VCARD\n' 
             + 'VERSION:3.0\n' 
-            + 'FN:' + 𝙸 𝙰𝚖 𝙺𝙸𝚉𝙰𝙺𝙸𝚇𝙳 + '\n'
+            + 'FN:' + name + '\n'
             + 'ORG:;\n'
-            + 'TEL;type=CELL;type=VOICE;waid=' + 6285878313791 + ':+' + 6285878313791 + '\n'
+            + 'TEL;type=CELL;type=VOICE;waid=' + number + ':+' + number + '\n'
             + 'END:VCARD'
             return zaki.sendMessage(from, { contacts: { displayName: name, contacts: [{ vcard }] }, mentions : men ? men : []},{ quoted: quoted })
         }
