@@ -3,6 +3,6 @@
   "botName": "ItsukiBot - MD",
   "sessionName": "kizakixd",
   "Mode": "Public"
-  "modelMenu": "img"
+  "modelMenu": "image"
   "pathImg": "./media/menu.jpg"
 }
